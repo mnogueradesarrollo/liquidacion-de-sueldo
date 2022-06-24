@@ -1,6 +1,5 @@
-function calcularSueldoNeto() {
-  let sueldoBasico = parseInt(document.getElementById("sueldoBasico").value);
-  let anios = parseInt(document.getElementById("anios").value);
+function calcularSueldoNeto(sueldoBasico, anios) {
+  
   let porc_antiguedad = 3;
   let total_antiguedad = parseInt(anios + porc_antiguedad);
   let sueldoBasicoConcepto = sueldoBasico;
@@ -50,3 +49,11 @@ function calcularSueldoNeto() {
   document.getElementById("totalNeto").innerHTML =
     "<h3>$" + totalNeto.toFixed(2) + "</h3>";
 }
+
+
+document.querySelector("#calcular").addEventListener("click", (e) => {
+  e.preventDefauld();
+  let sueldoBasico = parseFloat(+document.querySelector("#sueldoBasico").value);
+  let anios = parseInt(+document.querySelector("#anios").value);
+  calcularSueldoNeto(sueldoBasico, anios);
+});

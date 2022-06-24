@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Liquidación de Sueldo</title>
+  <title>Presupuesto PC</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
   <link rel="stylesheet" href="sueldo.js">
@@ -13,93 +13,68 @@
 <body>
   <div class="container text-center">
     <div class="display-2">
-      <b><u>Liquidación de Sueldos</b></u>
+      <b><u>Presupuesto PC</b></u>
     </div>
     <br><br>
-    <div class="alert alert-primary row justify-content-center mx-auto" role="alert" id="resultado" style="width: 500px;">
-      Ingrese el Sueldo Básico
-    </div>
-  </div>
-  <div class="row justify-content-center">
-    <div class="col-auto mt-2">
-      <table class="table table-bordered mx-auto d-block">
-        <tr>
-          <td>Sueldo Básico</td>
-          <td>Años</td>
-        </tr>
-        <tr>
-          <td>
-            <input type="number" id="sueldoBasico">
-          </td>
-          <td>
-            <input type="number" id="anios">
-          </td>
-        </tr>
-      </table>
-    </div>
-  </div>
-  <div class="form-group row justify-content-center mx-auto" style="width: 100px;" >
-    <button class="btn btn-primary btn-lg" id="calcular">Calcular</button>
-  </div>
-
+    
   <table class="table text-center">
     <tr>
       <td rowscan="3" colspan="1" style="width: 25%;">
         <h2>Concepto</h2>
       </td>
       <td rowscan="3" colspan="1" style="width: 25%;">
-        <h2>Haberes</h2>
+        <h2>Cantidad</h2>
       </td>
       <td rowscan="3" colspan="1" style="width: 25%;">
-        <h2>H. Exentos</h2>
+        <h2>Precio unitario</h2>
       </td>
       <td rowscan="3" colspan="1" style="width: 25%;">
-        <h2>Descuentos</h2>
+        <h2>Importe</h2>
       </td>
     </tr>
 
     <tr>
-      <td>Sueldo Básico</td>
-      <td><span id="sueldoBasicoConcepto"></span>$</td>
-      <td></td>
-      <td></td>
+      <td>Micro INTEL PENTIUM G6405</td>
+      <td><span id="totalHaberes"></span>1</td>
+      <td><span id="totalExentos"></span>$ 14060.-</td>
+      <td><span id="totalDescuentos"></span>$ 14060.-</td>
     </tr>
 
     <tr>
-      <td>Antiguedad</td>
-      <td><span id="antiguedad"></span>$</td>
-      <td></td>
-      <td></td>
+      <td>Mother GIGABYTE H510M-S2H</td>
+      <td><span id="totalHaberes"></span>1</td>
+      <td><span id="totalExentos"></span>$ 16653.-</td>
+      <td><span id="totalDescuentos"></span>$ 16653.-</td>
     </tr>
 
     <tr>
-      <td>Actividad Crítica</td>
-      <td><span id="actividadCritica"></span>$</td>
-      <td></td>
-      <td></td>
+      <td>Ram 8GB DDR4 2666MHZ CRUCIAL</td>
+      <td><span id="totalHaberes"></span>1</td>
+      <td><span id="totalExentos"></span>$ 6272.-</td>
+      <td><span id="totalDescuentos"></span>$ 6272.-</td>
     </tr>
 
     <tr>
-      <td>Bonificación por Función</td>
-      <td><span id="boniFuncion"></span>$</td>
-      <td></td>
-      <td></td>
+      <td>Disco SSD 240GB</td>
+      <td><span id="totalHaberes"></span>1</td>
+      <td><span id="totalExentos"></span>$ 5760.-</td>
+      <td><span id="totalDescuentos"></span>$ 5760.-</td>
     </tr>
 
     <tr>
-      <td>Bonificación por Título</td>
-      <td><span id="boniTitulo"></span>$</td>
-      <td></td>
-      <td></td>
+      <td>Gabinete Kit ATX Negro DS</td>
+      <td><span id="totalHaberes"></span>1</td>
+      <td><span id="totalExentos"></span>$ 6938.-</td>
+      <td><span id="totalDescuentos"></span>$ 6938.-</td>
     </tr>
 
     <tr>
-      <td>Productividad</td>
-      <td><span id="productividad"></span>$</td>
-      <td></td>
-      <td></td>
+      <td>Kit Teclado y Mouse Inalámbrico Logitech MK235</td>
+      <td><span id="totalHaberes"></span>1</td>
+      <td><span id="totalExentos"></span>$ 2800.-</td>
+      <td><span id="totalDescuentos"></span>$ 2800.-</td>
     </tr>
-    <tr>
+   <!-- <tr>
       <td>Presentismo y Puntualidad</td>
       <td></td>
       <td><span id="presentismoPuntualidad"></span>$</td>
@@ -118,17 +93,17 @@
       <td></td>
       <td><span id="ioma"></span>$</td>
     </tr>
-
+  -->
     <tr>
       <td>
         <h2>Total</h2>
       </td>
-      <td><span id="totalHaberes"></span>$</td>
-      <td><span id="totalExentos"></span>$</td>
-      <td><span id="totalDescuentos"></span>$</td>
+      <td><span id="totalHaberes"></span></td>
+      <td><span id="totalExentos"></span></td>
+      <td><span id="totalDescuentos"></span>$ 52483.-</td>
     </tr>
 
-    <tr>
+   <!-- <tr>
       <td>
         <h1>Neto a cobrar:</h1>
       </td>
@@ -136,7 +111,7 @@
       <td></td>
       <td><span id="totalNeto"></span>$</td>
     </tr>
-
+-->
   </table>
 
   
