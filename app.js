@@ -1,13 +1,3 @@
-/*
- * Pago por horas
- * El total de horas trabajadas
- *
- * Si el total de horas trabajadas es mayor a 40, entonces
- * se debe calcular el pago por horas extras y el pago por horas
- * Si el total de horas no es mayor a 40, entonces
- * se debe calcular el pago por horas
- */
-
 const calcularTotales = (sueldoBasico, anios) => {
   let porc_antiguedad = 3;
   let total_antiguedad = parseInt(anios + porc_antiguedad);
@@ -32,12 +22,14 @@ const calcularTotales = (sueldoBasico, anios) => {
   let totalDescuentos = parseFloat(ley + ioma);
   let totalNeto = parseFloat(totalHaberes + totalExentos - totalDescuentos);
 
-  document.querySelector("#resultado").innerHTML = `El sueldo Haberes es: ${totalHaberes}, Exento es: ${totalExentos}., Descuento es: ${totalDescuentos} SUELDO NETO ES: ${totalNeto}`;
+  document.querySelector(
+    "#resultado"
+  ).innerHTML = `El sueldo Haberes es: ${totalHaberes}, Exento es: ${totalExentos}., Descuento es: ${totalDescuentos} SUELDO NETO ES: ${totalNeto}`;
 };
 
 document.querySelector("#pro_calc").addEventListener("click", (e) => {
-    e.preventDefault();
-    let sueldoBasico = +document.querySelector("#sueldo_basico").value;
-    let anios = +document.querySelector("#anios_").value;
-    calcularTotales(sueldoBasico, anios);
+  e.preventDefault();
+  let sueldoBasico = +document.querySelector("#sueldo_basico").value;
+  let anios = +document.querySelector("#anios_").value;
+  calcularTotales(sueldoBasico, anios);
 });
